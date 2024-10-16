@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- GSAP for Animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <style>
+        /* Custom styles */
+        #assignment {
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+        
+        .diagonal-div {
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(to top left, #ffffff 50%, #1a0d66 50%);
+        }
+       
+    </style>
+</head>
+<body class="diagonal-div">
+
+    <div id="assignment" class="p-8">
+        <h2 class="text-3xl font-bold text-gray-100  mb-8">OUR SERVICES</h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+
+            <!-- Service 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div class="flex justify-center mb-4">
+                    <img src="./phone-call.png" alt="Emergency Plumbing Icon"
+                         class="service-icon h-16 w-16"/>
+                </div>
+                <h3 class="text-xl font-bold text-center mb-2">Emergency Plumbing Services</h3>
+                <p class="text-gray-600 text-center mb-4">Our plumbers are ready to go 24/7 for emergencies - including nights, weekends, and holidays.</p>
+                <a href="#" class="block text-center text-blue-600 font-semibold">EXPLORE THIS SERVICE &gt;</a>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div class="flex justify-center mb-4">
+                    <img src="./plumbing.png" alt="Plumbing and Drains Icon"
+                         class="service-icon h-16 w-16"/>
+                </div>
+                <h3 class="text-xl font-bold text-center mb-2">Plumbing and Drains</h3>
+                <p class="text-gray-600 text-center mb-4">As the largest plumbing and drain service company, we make thousands of repairs every day.</p>
+                <a href="#" class="block text-center text-blue-600 font-semibold">EXPLORE THIS SERVICE &gt;</a>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div class="flex justify-center mb-4">
+                    <img src="./drop.png" alt="Water Damage Icon"
+                         class="service-icon h-16 w-16"/>
+                </div>
+                <h3 class="text-xl font-bold text-center mb-2">Water Damage</h3>
+                <p class="text-gray-600 text-center mb-4">Our teams are equipped with state-of-the-art water extraction and cleanup equipment.</p>
+                <a href="#" class="block text-center text-blue-600 font-semibold">EXPLORE THIS SERVICE &gt;</a>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div class="flex justify-center mb-4">
+                    <img src="./water-heater.png" alt="Water Heater Icon"
+                         class="service-icon h-16 w-16"/>
+                </div>
+                <h3 class="text-xl font-bold text-center mb-2">Water Heaters</h3>
+                <p class="text-gray-600 text-center mb-4">Trust Roto-Rooter for repair and replacement of gas, electric, and tankless water heaters.</p>
+                <a href="#" class="block text-center text-blue-600 font-semibold">EXPLORE THIS SERVICE &gt;</a>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // Function to add hover animation to rotate icons
+        document.querySelectorAll('.service-icon').forEach((icon) => {
+            gsap.set(icon, { rotation: 0 });
+            icon.addEventListener('mouseenter', () => {
+                gsap.to(icon, { rotation: 360, duration: 1 });
+            });
+            icon.addEventListener('mouseleave', () => {
+                gsap.to(icon, { rotation: 0, duration: 1 });
+            });
+        });
+    </script>
+
+</body>
+</html>
